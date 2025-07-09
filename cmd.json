@@ -1,0 +1,50 @@
+{
+    "abci_block": {
+        "time": "2025-07-09T07:51:46.804204332",
+        "signed_action_bundles": [
+            [
+                "0x49b14beae8f21b43427cfd5a909487f11733461e456f2d82e925b312f32b5d90",
+                {
+                    "signed_actions": [
+                        {
+                            "signature": {
+                                "r": "0xe145727484afe17f7e3023f4bef752b8791073eb281ea294b05e56523648bfa1",
+                                "s": "0x5ce6f520dfc8ee88dd31eeeacda5060280c7fd690b3dc20605065a8e50c64d88",
+                                "v": 28
+                            },
+                            "action": {
+                                "type": "noop"
+                            },
+                            "nonce": 1752047327758
+                        }
+                    ],
+                    "broadcaster": "0x67e451964e0421f6e7d07be784f35c530667c2b3",
+                    "broadcaster_nonce": 1752047327759
+                }
+            ]
+        ],
+        "round": 918446653,
+        "parent_round": 918446650,
+        "hardfork": {
+            "version": 47,
+            "round": 917347276
+        },
+        "proposer": "0x5ac99df645f3414876c816caa18b2d234024b487"
+    },
+    "resps": {
+        "Full": [
+            [
+                "0x49b14beae8f21b43427cfd5a909487f11733461e456f2d82e925b312f32b5d90",
+                [
+                    {
+                        "user": null,
+                        "res": {
+                            "status": "err",
+                            "response": "User or API Wallet 0xebcfd01db309d840a73869b8645d23b186572ec2 does not exist."
+                        }
+                    }
+                ]
+            ]
+        ]
+    }
+}

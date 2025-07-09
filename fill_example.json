@@ -1,0 +1,155 @@
+[
+    "0xbc9efeb7403afe702593b128def2dece5da1bbaf",
+    {
+        "coin": "kPEPE",
+        "px": "0.010224",
+        "sz": "1.0",
+        "side": "B",
+        "time": 1752044399941,
+        "startPosition": "2216257.0",
+        "dir": "Open Long",
+        "closedPnl": "0.0",
+        "hash": "0x01039ff0c836c366fa720427213e67015e0070e721a4eca2277d7e6eb36d01b7",
+        "oid": 110973307114,
+        "crossed": false,
+        "fee": "0.0",
+        "tid": 454601692036557,
+        "feeToken": "USDC"
+    }
+]
+[
+    "0xed598eb4e4554f38d5cfdef5bd33900d01673df3",
+    {
+        "coin": "kPEPE",
+        "px": "0.010224",
+        "sz": "1.0",
+        "side": "A",
+        "time": 1752044399941,
+        "startPosition": "1.0",
+        "dir": "Close Long",
+        "closedPnl": "0.000004",
+        "hash": "0x01039ff0c836c366fa720427213e67015e0070e721a4eca2277d7e6eb36d01b7",
+        "oid": 110973457312,
+        "crossed": true,
+        "fee": "0.000009",
+        "builderFee": "0.000005",
+        "tid": 454601692036557,
+        "feeToken": "USDC"
+    }
+]
+[
+    "0xd33394cff5cda89070ecd0b2a6791f7fe900f515",
+    {
+        "coin": "SOL",
+        "px": "152.83",
+        "sz": "0.07",
+        "side": "B",
+        "time": 1752044400000,
+        "startPosition": "29.62",
+        "dir": "Open Long",
+        "closedPnl": "0.0",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973457324,
+        "crossed": true,
+        "fee": "0.004092",
+        "tid": 637000482573107,
+        "feeToken": "USDC"
+    }
+]
+[
+    "0xb4d6fe0f1504a55c65a986ef55b9148a6f0dae7a",
+    {
+        "coin": "SOL",
+        "px": "152.83",
+        "sz": "0.07",
+        "side": "A",
+        "time": 1752044400000,
+        "startPosition": "-31.93",
+        "dir": "Open Short",
+        "closedPnl": "0.0",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973440534,
+        "crossed": false,
+        "fee": "-0.000106",
+        "tid": 637000482573107,
+        "cloid": "0xb4d6fe0f41dedbbdf4297dbdf346917c",
+        "feeToken": "USDC"
+    }
+]
+[
+    "0x03b9a189e2480d1e4c3007080b29f362282130fa",
+    {
+        "coin": "CELO",
+        "px": "0.32008",
+        "sz": "38.0",
+        "side": "B",
+        "time": 1752044400000,
+        "startPosition": "-7258.0",
+        "dir": "Close Short",
+        "closedPnl": "-0.307762",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973456058,
+        "crossed": false,
+        "fee": "-0.000121",
+        "tid": 452865145471961,
+        "cloid": "0xb7654957936c6f8966e4c5298df1e5f5",
+        "feeToken": "USDC"
+    }
+]
+[
+    "0x422b7928003324f0e5f5577c5e3fbc5b744167aa",
+    {
+        "coin": "CELO",
+        "px": "0.32008",
+        "sz": "38.0",
+        "side": "A",
+        "time": 1752044400000,
+        "startPosition": "-58300.0",
+        "dir": "Open Short",
+        "closedPnl": "0.0",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973457325,
+        "crossed": true,
+        "fee": "0.004865",
+        "tid": 452865145471961,
+        "feeToken": "USDC"
+    }
+]
+[
+    "0x010461c14e146ac35fe42271bdc1134ee31c703a",
+    {
+        "coin": "DYM",
+        "px": "0.23793",
+        "sz": "51.9",
+        "side": "B",
+        "time": 1752044400000,
+        "startPosition": "401609.7",
+        "dir": "Open Long",
+        "closedPnl": "0.0",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973445374,
+        "crossed": false,
+        "fee": "0.0",
+        "tid": 116296325122392,
+        "feeToken": "USDC"
+    }
+]
+[
+    "0x422b7928003324f0e5f5577c5e3fbc5b744167aa",
+    {
+        "coin": "DYM",
+        "px": "0.23793",
+        "sz": "51.9",
+        "side": "A",
+        "time": 1752044400000,
+        "startPosition": "-72036.9",
+        "dir": "Open Short",
+        "closedPnl": "0.0",
+        "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "oid": 110973457326,
+        "crossed": true,
+        "fee": "0.004939",
+        "tid": 116296325122392,
+        "feeToken": "USDC"
+    }
+]
