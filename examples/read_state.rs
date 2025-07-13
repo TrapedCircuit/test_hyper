@@ -32,20 +32,27 @@ fn main() {
 
 
     let mut total_bid_value = 0.0;
+    let mut bid_sz = 0.0;
     for (i, v) in btc_vec0.iter().enumerate() {
         let sz = v["sz"].as_str().unwrap().parse::<f64>().unwrap();
         let price = v["limitPx"].as_str().unwrap().parse::<f64>().unwrap();
         total_bid_value += sz * price;
+        bid_sz += sz;
     }
 
     let mut total_ask_value = 0.0;
+    let mut ask_sz = 0.0;
     for (i, v) in btc_vec1.iter().enumerate() {
         let sz = v["sz"].as_str().unwrap().parse::<f64>().unwrap();
         let price = v["limitPx"].as_str().unwrap().parse::<f64>().unwrap();
         total_ask_value += sz * price;
+        ask_sz += sz;
     }
 
     println!("total_bid_value: {}", total_bid_value);
     println!("total_ask_value: {}", total_ask_value);
+    println!("bid_sz: {}", bid_sz);
+    println!("ask_sz: {}", ask_sz);
+
 
 }
