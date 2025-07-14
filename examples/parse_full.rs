@@ -13,9 +13,22 @@ fn main() {
     let value: Value = serde_json::from_slice(&buffer).unwrap();
 
     let exchange_data = value["exchange"].as_object().unwrap();
-    let perp_dexs = &exchange_data["perp_dexs"].as_array().unwrap()[0];
-    let context = &exchange_data["context"];
 
+    for key in exchange_data.keys() {
+        println!("{}", key);
+    }
+
+    let perp_dexs = &exchange_data["perp_dexs"].as_array().unwrap()[0];
+    let perp_dexs_locked = &exchange_data["perp_dexs_locked"];
+
+    let mut file = File::create("data/perp_dexs_locked.json").unwrap();
+    file.write_all(serde_json::to_string_pretty(&perp_dexs_locked).unwrap().as_bytes()).unwrap();
+
+    let user_states = &exchange_data["user_states"];
+    let mut file = File::create("data/user_states.json").unwrap();
+    file.write_all(serde_json::to_string_pretty(&user_states).unwrap().as_bytes()).unwrap();
+
+    let context = &exchange_data["context"];
 
     let perp_dexs_obj = perp_dexs.as_object().unwrap();
     let books = &perp_dexs_obj["books"];
