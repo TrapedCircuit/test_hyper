@@ -1,5 +1,6 @@
 use std::{fs::File, io::Read};
 
+use anyhow::Context;
 use rmpv::Value;
 
 
@@ -17,11 +18,10 @@ fn main() {
         let mut cursor = std::io::Cursor::new(&buffer);
         let value: Value = rmpv::decode::read_value(&mut cursor).unwrap();
 
-        let exchange = find_value(&value, "exchange").unwrap();
-        let ctx = find_value(exchange, "ctx").unwrap();
+        let exchange = find_value(&value, "exchange").context("0").unwrap();
+        let ctx = find_value(exchange, "ctx").context("1").unwrap();
 
-
-        let height = find_value(ctx, "height").unwrap().as_u64().unwrap();
+        let height = find_value(ctx, "height").context("2").unwrap().as_u64().unwrap();
 
         println!("height: {}", height);
 
