@@ -11,6 +11,7 @@ fn main() {
 
     loop {
         println!("looping");
+        let now = std::time::Instant::now();
         let mut file = File::open(path).unwrap();
         let mut buffer = Vec::new();
         file.read_to_end(&mut buffer).unwrap();
@@ -24,7 +25,7 @@ fn main() {
         let height = find_value(ctx, "height").context("2").unwrap().as_u64().unwrap();
         let time  = find_value(ctx, "time").context("3").unwrap().as_str().unwrap();
 
-        println!("height: {}, time: {}", height, time);
+        println!("height: {}, time: {}, time: {}", height, time, now.elapsed().as_secs_f64());
 
         drop(value);
     }
