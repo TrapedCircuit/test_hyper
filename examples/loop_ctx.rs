@@ -9,6 +9,7 @@ fn main() {
 
 
     loop {
+        println!("looping");
         let mut file = File::open(path).unwrap();
         let mut buffer = Vec::new();
         file.read_to_end(&mut buffer).unwrap();
