@@ -9,12 +9,12 @@ fn main() {
     let path = "/home/ethan/hlnode/hyperliquid_data/abci_state.rmp";
 
 
+    let mut buffer = Vec::new();
     loop {
         println!("looping");
         let now = std::time::Instant::now();
         let mut file = File::open(path).unwrap();
-        let file_size = file.metadata().unwrap().len();
-        let mut buffer = Vec::with_capacity(file_size as usize);
+        buffer.clear();
         file.read_to_end(&mut buffer).unwrap();
 
         let mut cursor = std::io::Cursor::new(&buffer);
