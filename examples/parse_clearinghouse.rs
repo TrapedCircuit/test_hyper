@@ -23,15 +23,38 @@ fn main() -> Result<(), anyhow::Error> {
             if let Some(p) = p.get("p") {
                 let positions = p.as_array().unwrap();
                 for pos in positions {
+
                     let (asset_idx, pos_data): (u64, Value) =
-                        serde_json::from_value(pos.clone()).unwrap();
+                    serde_json::from_value(pos.clone()).unwrap();
+
+                    if let Some(s) = pos_data.get("s") {
+                        // if pos_data.get("M").is_none() {
+                        //     println!("no m {}, {}", addr, pos);
+                        //     continue;
+                        // }
+
+                        // if pos_data.get("l").is_none() {
+                        //     println!("no l {}, {}", addr, pos);
+                        //     continue;
+                        // }
+
+                        // if pos_data.get("f").is_none() {
+                        //     println!("no f {}, {}", addr, pos);
+                        //     continue;
+                        // }
+
+                        if pos_data.get("e").is_none() {
+                            println!("no e {}, {}", addr, pos);
+                            continue;
+                        }
+                    }
 
                     if asset_idx == 1 {
                         if let Some(s) = pos_data.get("s") {
                             let s = match s.as_i64() {
                                 Some(s) => s as f64 / 10_f64.powf(4.0),
                                 None => {
-                                    println!("{}, {}", addr, s);
+                                    // println!("{}, {}", addr, s);
                                     continue;
                                 }
                             };
@@ -57,7 +80,7 @@ fn main() -> Result<(), anyhow::Error> {
                                         .as_i64()
                                         .ok_or(anyhow::anyhow!("no i l"))?,
                                     _ => {
-                                        println!("{}, {}", addr, l);
+                                        // println!("{}, {}", addr, l);
                                         continue;
                                     }
                                 };
@@ -65,6 +88,8 @@ fn main() -> Result<(), anyhow::Error> {
                                 let value =
                                     real_position_value(s, e, oracle_px, f, leverage as u8);
                                 total_value += value;
+                            } else {
+                                // println!("{}, {}", addr, pos_data);
                             }
                         }
                     }

@@ -4,7 +4,7 @@ use serde_json::Value;
 
 
 fn main() {
-    let path = "660210000.full.json";
+    let path = "abci_state.full.json";
 
     let mut file = File::open(path).unwrap();
     let mut buffer = Vec::new();
@@ -18,6 +18,7 @@ fn main() {
         println!("{}", key);
     }
 
+    /// perps
     let perp_dexs = &exchange_data["perp_dexs"].as_array().unwrap()[0];
     let perp_dexs_locked = &exchange_data["perp_dexs_locked"];
 

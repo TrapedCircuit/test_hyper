@@ -38,4 +38,4 @@ RUN curl -o /home/$USERNAME/hl-visor $HL_VISOR_URL \
 EXPOSE 4000-4010
 
 # Start an interactive shell to login to container
-ENTRYPOINT ["/home/hluser/hl-visor", "run-non-validator",  "--write-order-statuses", "--batch-by-block", "--write-misc-events", "--write-fills", "--write-trades"]
+ENTRYPOINT ["/home/hluser/hl-visor", "run-non-validator","--serve-info", "--write-order-statuses", "--batch-by-block", "--write-misc-events", "--write-fills", "--write-trades", "--write-raw-book-diffs"]
