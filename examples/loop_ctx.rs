@@ -22,8 +22,9 @@ fn main() {
         let ctx = find_value(exchange, "context").context("1").unwrap();
 
         let height = find_value(ctx, "height").context("2").unwrap().as_u64().unwrap();
+        let time  = find_value(ctx, "time").context("3").unwrap().as_str().unwrap();
 
-        println!("height: {}", height);
+        println!("height: {}, time: {}", height, time);
 
         drop(value);
     }
