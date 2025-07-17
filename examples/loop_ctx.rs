@@ -13,7 +13,8 @@ fn main() {
         println!("looping");
         let now = std::time::Instant::now();
         let mut file = File::open(path).unwrap();
-        let mut buffer = Vec::new();
+        let file_size = file.metadata().unwrap().len();
+        let mut buffer = Vec::with_capacity(file_size as usize);
         file.read_to_end(&mut buffer).unwrap();
 
         let mut cursor = std::io::Cursor::new(&buffer);
@@ -26,7 +27,6 @@ fn main() {
         let time  = find_value(ctx, "time").context("3").unwrap().as_str().unwrap();
 
         println!("height: {}, time: {}, time: {}", height, time, now.elapsed().as_secs_f64());
-
         drop(value);
     }
 
